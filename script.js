@@ -50,7 +50,7 @@ const database = [
             { name: "Jose Vandei Silva de Oliveira", role: "PEC", phone: "4746-5037 / 6037", email: "josevandei@prof.educacao.sp.gov.br" },
             { name: "Josiane Marques Moreira", role: "PEC", phone: "4746-5049 / 6049", email: "josiane.conceicao@educacao.sp.gov.br" },
             { name: "Lais Guimarães Furst", role: "PEC", phone: "4746-7251", email: "lais.furst@educacao.sp.gov.br" },
-            { name: "Marcelo Vicente C. da Silva", role: "PEC", phone: "***", email: "marcelo.silva24@educacao.sp.gov.br" },
+            { name: "Marcelo Vicente C. da Silva", role: "PEC", phone: "***", email: "marcelo.silva24@servidor.educacao.sp.gov.br" },
             { name: "Marcia Yoshiko Buto", role: "PEC", phone: "4746-7218", email: "marcia.buto@educacao.sp.gov.br" },
             { name: "Marinete Pereira de Souza", role: "PEC", phone: "4746-5048 / 6048", email: "marineteoliveira@prof.educacao.sp.gov.br" },
             { name: "Midian de Almeida Pereira", role: "PEC", phone: "***", email: "midian.pereira@educacao.sp.gov.br" },
@@ -121,11 +121,14 @@ const database = [
             { name: "Fran Galvão", role: "SEAPE", phone: "4746-5009", email: "francinalva.galvao@educacao.sp.gov.br" },
             { name: "Luiz Barros Orfão", role: "SEAPE", phone: "4746-5010", email: "luiz.orfao@educacao.sp.gov.br" },
             { name: "Mario Mendes Leal Filho", role: "SEAPE", phone: "4746-7255", email: "mariomendes@professor.educacao.sp.gov.br" },
-            { name: "Lidiane Souza de Oliveira", role: "SEAPE", phone: "4746-5015", email: "lidiane.oliveira@educacao.sp.gov.br" },
+            { name: "Regina Ramos de Lima Vieira", role: "SEAPE", phone: "4746-5012", email: "suz.seape@educacao.sp.gov.br" },
+            { name: "Rita de Cássia Castro Souza", role: "SEAPE", phone: "4746-7230", email: "suz.seape@educacao.sp.gov.br" },
+            { name: "Maria Inaídes Pereira Góes", role: "SEAPE", phone: "4746-7254", email: "suz.seape@educacao.sp.gov.br" },
+            { name: "Angelica Rodrigues Sousa de Oliveira", role: "SEFREP", phone: "4746-5015", email: "suz.sefrep@educacao.sp.gov.br" },
             { name: "Eliane Durval da Silva", role: "SEFREP", phone: "4746-7234", email: "Eliane.Silva01@educacao.sp.gov.br" },
-            { name: "Rosangela Aparecida Ramos", role: "SEFREP", phone: "4746-5028", email: "rosangela.silva52@educacao.sp.gov.br" },
+            { name: "Rosangela Aparecida Ramos", role: "SEFREP", phone: "4746-5018", email: "rosangela.silva52@educacao.sp.gov.br" },
             { name: "Wilma Aparecida de Rezende", role: "SEFREP", phone: "4746-7229", email: "wilma.rezende@educacao.sp.gov.br" },
-            { name: "Iva Rosa Santos de Oliveira", role: "SEFREP", phone: "4746-5013 / 6013", email: "Iva.santos01@educacao.sp.gov.br" },
+            { name: "Iva Rosa Santos de Oliveira", role: "SEFREP", phone: "4746-5013", email: "Iva.santos01@educacao.sp.gov.br" },
             { name: "Erika Karen Vitor F. da Silva", role: "SEFREP", phone: "4746-7215", email: "erika.barbosa@educacao.sp.gov.br" },
             { name: "Daniela Soares Silva Resende", role: "SEFREP", phone: "4746-5017", email: "daniela.resende@educacao.sp.gov.br" }
         ]
@@ -182,6 +185,5 @@ function renderContacts() {
         container.appendChild(section);
     });
 }
-
 
 document.addEventListener('DOMContentLoaded', renderContacts);
