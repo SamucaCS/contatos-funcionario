@@ -50,7 +50,7 @@ const database = [
             { name: "Jose Vandei Silva de Oliveira", role: "PEC", phone: "4746-5037 / 6037", email: "josevandei@prof.educacao.sp.gov.br" },
             { name: "Josiane Marques Moreira", role: "PEC", phone: "4746-5049 / 6049", email: "josiane.conceicao@educacao.sp.gov.br" },
             { name: "Lais Guimarães Furst", role: "PEC", phone: "4746-7251", email: "lais.furst@educacao.sp.gov.br" },
-            { name: "Marcelo Vicente C. da Silva", role: "PEC", phone: "***", email: "marcelo.silva24@servidor.educacao.sp.gov.br" },
+            { name: "Marcelo Vicente C. da Silva", role: "PEC", phone: "***", email: "marcelo.silva24@educacao.sp.gov.br" },
             { name: "Marcia Yoshiko Buto", role: "PEC", phone: "4746-7218", email: "marcia.buto@educacao.sp.gov.br" },
             { name: "Marinete Pereira de Souza", role: "PEC", phone: "4746-5048 / 6048", email: "marineteoliveira@prof.educacao.sp.gov.br" },
             { name: "Midian de Almeida Pereira", role: "PEC", phone: "***", email: "midian.pereira@educacao.sp.gov.br" },
@@ -182,5 +182,6 @@ function renderContacts() {
         container.appendChild(section);
     });
 }
+
 
 document.addEventListener('DOMContentLoaded', renderContacts);
