@@ -1,0 +1,308 @@
+:root {
+    /* Cores Institucionais */
+    --sp-green: #009c3b;
+    /* Verde Bandeira */
+    --sp-dark-green: #00682a;
+    /* Verde Escuro Institucional */
+    --sp-yellow: #ffdf00;
+    /* Amarelo Bandeira (detalhes) */
+    --sp-blue: #002776;
+    /* Azul Bandeira */
+
+    /* Fundo e Textos */
+    --bg-color: #f8f9fa;
+    --white: #ffffff;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+
+    /* Sombras e Bordas */
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --card-border: 1px solid #e9ecef;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    /* Fonte mais séria/governamental */
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: var(--white);
+    padding-top: 25px;
+    margin-bottom: 50px;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 25px;
+}
+
+/* Brasão SP */
+.brand-logo img {
+    height: 90px;
+    width: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Texto Central */
+.brand-text {
+    text-align: center;
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.brand-text h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.2rem;
+    color: var(--sp-dark-green);
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.brand-text .divider {
+    width: 60px;
+    height: 3px;
+    background-color: var(--sp-yellow);
+    margin: 8px auto;
+}
+
+.brand-text p {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.brand-text .sub-text {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+/* Símbolo Direito (Cuidado/Gestão) */
+.care-symbol {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-circle {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background: #e8f5e9;
+    /* Fundo verde bem claro */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--sp-green);
+}
+
+.main-icon {
+    font-size: 1.8rem;
+    color: var(--sp-dark-green);
+}
+
+.sub-icon {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    font-size: 1rem;
+    background: var(--white);
+    color: var(--sp-blue);
+    padding: 4px;
+    border-radius: 50%;
+    border: 2px solid #e8f5e9;
+}
+
+.care-text {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--sp-dark-green);
+    text-transform: uppercase;
+    line-height: 1.2;
+    display: none;
+    /* Esconde texto em telas pequenas, mostra em grandes */
+}
+
+@media(min-width: 768px) {
+    .care-text {
+        display: block;
+    }
+}
+
+/* Faixa Bandeira SP (Preto, Branco, Vermelho) */
+.sp-stripe {
+    display: flex;
+    height: 6px;
+    width: 100%;
+}
+
+.sp-stripe .black {
+    flex: 1;
+    background-color: #000;
+}
+
+.sp-stripe .white {
+    flex: 1;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-bottom: none;
+}
+
+.sp-stripe .red {
+    flex: 1;
+    background-color: #ce1126;
+}
+
+
+/* --- CARDS E SEÇÕES --- */
+.sector-section {
+    margin-bottom: 50px;
+}
+
+.sector-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.sector-title {
+    font-size: 1.5rem;
+    color: var(--sp-dark-green);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sector-title i {
+    color: var(--sp-green);
+    opacity: 0.8;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.contact-card {
+    background: var(--white);
+    border: var(--card-border);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 4px solid transparent;
+}
+
+.contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-soft);
+    border-left-color: var(--sp-green);
+}
+
+.role {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--sp-blue);
+    /* Azul para o cargo para destacar */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-secondary);
+}
+
+.info-item i {
+    width: 16px;
+    text-align: center;
+    color: var(--sp-green);
+}
+
+.info-item a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+.info-item a:hover {
+    color: var(--sp-dark-green);
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    background-color: var(--white);
+    border-top: 4px solid var(--sp-green);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 650px) {
+    .header-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .brand-logo img {
+        height: 70px;
+    }
+
+    .care-symbol {
+        margin-top: 10px;
+    }
+
+    .brand-text h1 {
+        font-size: 1.8rem;
+    }
+}
