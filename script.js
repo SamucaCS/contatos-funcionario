@@ -42,7 +42,7 @@ const database = [
             { name: "Amanda Paula Rodrigues Teixeira", role: "PEC", phone: "***", email: "amanda.teixeira01@educacao.sp.gov.br" },
             { name: "Ari Oliveira Carvalho Junior", role: "PEC", phone: "4746-5036 / 6036", email: "ari.junior@educacao.sp.gov.br" },
             { name: "Camila Santos Rocha", role: "PEC", phone: "4746-7217", email: "camilasantosrocha@prof.educacao.sp.gov.br" },
-            { name: "Carlos Magno Prechechan", role: "PEC", phone: "4746-5044 / 6044", email: "precechan@professor.educacao.sp.gov.br" },
+            { name: "Carlor M Prechecham", role: "PEC", phone: "4746-5044 / 6044", email: "precechan@prof.educacao.sp.gov.br" },
             { name: "Claudia B.S Mirandola", role: "PEC", phone: "4746-5040 / 6040", email: "Claudia.Mirandola@educacao.sp.gov.br" },
             { name: "Fabio de Paula Ferraz", role: "PEC", phone: "4746-7222", email: "fabioferraz@prof.educacao.sp.gov.br" },
             { name: "Fabiana Gomes Ramos da Silva", role: "PEC", phone: "***", email: "fabiana.silva26@educacao.sp.gov.br" },
@@ -87,6 +87,7 @@ const database = [
     {
         sector: "SEAFIN - Admin e Finanças",
         icon: "fa-calculator",
+        info: "Protocolo: 4746-7220",
         members: [
             { name: "Elaine Cristina Lopes", role: "Chefe de Serviço", phone: "4746-7231", email: "suz.seafin@educacao.sp.gov.br" },
             { name: "Ana Vitorina Dias", role: "Chefe de Seção / SEFIN", phone: "4746-7259", email: "suz.sefin@educacao.sp.gov.br" },
@@ -187,4 +188,3 @@ function renderContacts() {
 }
 
 document.addEventListener('DOMContentLoaded', renderContacts);
-
