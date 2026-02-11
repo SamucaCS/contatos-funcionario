@@ -3,7 +3,7 @@ const database = [
         sector: "Gabinete / Assessoria",
         icon: "fa-building",
         members: [
-            { name: "Raul Martins dos Santos", role: "Recepção Gabinete", phone: "4746-7214", email: "Raul.Santos01@educacao.sp.gov.br" },
+            { name: "GABINETE", role: "Recepção Gabinete", phone: "4746-7214", email: "suz@educacao.sp.gov.br" },
             { name: "Luiz Fernando Siqueira", role: "ASURE - Executivo Público", phone: "4746-5051 / 6051", email: "luiz.siqueira@educacao.sp.gov.br" }
         ]
     },
