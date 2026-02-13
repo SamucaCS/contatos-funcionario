@@ -3,8 +3,8 @@ const database = [
         sector: "Gabinete / Assessoria",
         icon: "fa-building",
         members: [
-            { name: "GABINETE", role: "Recepção Gabinete", phone: "4746-7214", email: "suz@educacao.sp.gov.br" },
-            { name: "Luiz Fernando Siqueira", role: "ASURE - Executivo Público", phone: "4746-5051 / 6051", email: "luiz.siqueira@educacao.sp.gov.br" }
+            { name: "GABINETE", role: "Recepção Gabinete", phone: "4746-7214 | 4746-7220", email: "suz@educacao.sp.gov.br" },
+             { name: "GABINETE", role: "Recepção Gabinete", phone: "4746-7220", email: "suz@educacao.sp.gov.br" },
         ]
     },
     {
@@ -87,7 +87,7 @@ const database = [
     {
         sector: "SEAFIN - Admin e Finanças",
         icon: "fa-calculator",
-        info: "Protocolo: 4746-7220",
+        info: "Protocolo: 4746-7210",
         members: [
             { name: "Elaine Cristina Lopes", role: "Chefe de Serviço", phone: "4746-7231", email: "suz.seafin@educacao.sp.gov.br" },
             { name: "Ana Vitorina Dias", role: "Chefe de Seção / SEFIN", phone: "4746-7259", email: "suz.sefin@educacao.sp.gov.br" },
