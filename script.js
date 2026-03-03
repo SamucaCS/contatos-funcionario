@@ -5,7 +5,6 @@ const database = [
         members: [
             { name: "GABINETE", role: "Recepção Gabinete", phone: "4746-7214 | 4746-7220", email: "suz@educacao.sp.gov.br" },
              { name: "GABINETE", role: "Recepção Gabinete", phone: "4746-7220", email: "suz@educacao.sp.gov.br" },
-              { name: "GABINETE", role: "Recepção Gabinete", phone: "4746-7214 | 4746-7220", email: "suz@educacao.sp.gov.br" },
              { name: "ASSESSORIA TÉCNICA", role: "Recepção Gabinete", phone: "4746-5051", email: "luiz.siqueira@educacao.sp.gov.br" },
         ]
     },
