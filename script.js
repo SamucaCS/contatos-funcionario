@@ -79,8 +79,8 @@ const database = [
         sector: "SEINTEC - Tecnologia e Info",
         icon: "fa-laptop",
         members: [
-            { name: "Carlos Alexandre da Silva Camillo", role: "SEINTEC", phone: "4746-5021", email: "suz.seintec@educacao.sp.gov.br" },
-            { name: "Samuel Carvalho da Silva", role: "SETEC", phone: "4746-7258", email: "suz.setec@educacao.sp.gov.br" },
+            { name: "Carlos Alexandre da Silva Camillo", role: "Chefe de Serviço / SEINTEC", phone: "4746-5021", email: "suz.seintec@educacao.sp.gov.br" },
+            { name: "Samuel Carvalho da Silva", role: " Chefe de Seção / SETEC", phone: "4746-7258", email: "suz.setec@educacao.sp.gov.br" },
             { name: "Luiz Fabiano Camillo ", role: "Anlista de suporte Pleno", phone: "4746-7240", email: "suz.setec@educacao.sp.gov.br" },
             { name: "Bryan dos Santos Nascimento", role: "SEINTEC / Estagiário", phone: "", email: "suz.seintec@educacao.sp.gov.br" },
         ]
@@ -116,7 +116,7 @@ const database = [
         sector: "SEPES - Serviço de Pessoas",
         icon: "fa-users",
         members: [
-            { name: "Taynã Iara da Silva Pinto Moura", role: "Chefe de Serviço", phone: "4746-5006", email: "suz.sepes@educacao.sp.gov.br" },
+            { name: "Taynã Iara da Silva Pinto Moura", role: "Chefe de Serviço / Sepes", phone: "4746-5006", email: "suz.sepes@educacao.sp.gov.br" },
             { name: "Vanessa Sutt", role: "Chefe de Seção / SEAPE", phone: "4746-7249", email: "suz.seape@educacao.sp.gov.br" },
             { name: "Cristina do Vale", role: "Chefe de Seção / SEFREP", phone: "4746-7245", email: "suz.sefrep@educacao.sp.gov.br" },
             { name: "Aline Cardoso de Sá", role: "SEAPE", phone: "4746-7250", email: "aline.sa02@educacao.sp.gov.br" },
