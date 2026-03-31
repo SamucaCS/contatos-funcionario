@@ -128,7 +128,7 @@ const database = [
             { name: "Maria Inaídes Pereira Góes", role: "SEAPE", phone: "4746-7254", email: "suz.seape@educacao.sp.gov.br" },
             { name: "Angelica Rodrigues Sousa de Oliveira", role: "SEFREP", phone: "4746-5015", email: "suz.sefrep@educacao.sp.gov.br" },
             { name: "Eliane Durval da Silva", role: "SEFREP", phone: "4746-7234", email: "Eliane.Silva01@educacao.sp.gov.br" },
-            { name: "Clayton Souza barrienton", role: "SEFREP", phone: "4746-5018", email: "Clayton.barrienton@educacao.sp.gov.br" },
+            { name: "Clayton Souza barriento", role: "SEFREP", phone: "4746-5018", email: "Clayton.barriento@educacao.sp.gov.br" },
             { name: "Wilma Aparecida de Rezende", role: "SEFREP", phone: "4746-7229", email: "wilma.rezende@educacao.sp.gov.br" },
             { name: "Iva Rosa Santos de Oliveira", role: "SEFREP", phone: "4746-5013", email: "Iva.santos01@educacao.sp.gov.br" },
             { name: "Erika Karen Vitor F. da Silva", role: "SEFREP", phone: "4746-7215", email: "erika.barbosa@educacao.sp.gov.br" },
