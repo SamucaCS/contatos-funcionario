@@ -12,22 +12,21 @@ const database = [
         icon: "fa-eye",
         info: "Plantão: 4746-7227 / 4746-7228",
         members: [
-            { name: "Carla de Almeida Leite", role: "Supervisor", phone: "4746-5030", email: "carla.leite@educacao.sp.gov.br" },
             { name: "Cintia Souza Borges", role: "Supervisor", phone: "***", email: "cintia.borges01@educacao.sp.gov.br" },
             { name: "Edson Fernandes de Oliveira", role: "Supervisor", phone: "4746-5032", email: "edson.oliveira04@educacao.sp.gov.br" },
             { name: "Elaine Ferreira Cunha", role: "Supervisor", phone: "4746-5026", email: "elaine.cunha1@educacao.sp.gov.br" },
             { name: "Elisabete Gomes Benatti", role: "Supervisor", phone: "4746-5033", email: "elisabete.gomes01@educacao.sp.gov.br" },
             { name: "Elizabeth das Neves Alves Pereira", role: "Supervisor", phone: "4746-5024", email: "elizabeth.pereira@educacao.sp.gov.br" },
             { name: "Gisele Gonçalves Callado", role: "Supervisor", phone: "4746-7224", email: "gisele.callado@educacao.sp.gov.br" },
-            { name: "Jani Aparecida de Lima Ramos", role: "Supervisor", phone: "4746-5031", email: "jani.ramos@educacao.sp.gov.br" },
-            { name: "José Odair Ribeiro", role: "Supervisor", phone: "4746-7223", email: "jose.ribeiro06@educacao.sp.gov.br" },
+        
+           
             { name: "Lethycia Regina Rodrigues", role: "Supervisor", phone: "4746-5028", email: "lethycia.rodrigues@educacao.sp.gov.br" },
-            { name: "Mara Silvia Bioto", role: "Supervisor", phone: "4746-7226", email: "Mara.Bioto@educacao.sp.gov.br" },
+            
             { name: "Mirela de Oliveira Roman", role: "Supervisor", phone: "4746-5023", email: "mirela.roman@educacao.sp.gov.br" },
             { name: "Mirian Miya", role: "Supervisor", phone: "4746-7213", email: "mirian.miya@educacao.sp.gov.br" },
             { name: "Núbia Ferreira de Melo", role: "Supervisor", phone: "4746-5025", email: "Nubia.Melo@educacao.sp.gov.br" },
             { name: "Patrícia Ferreira", role: "Supervisor", phone: "4746-5029", email: "patricia.ferreira04@educacao.sp.gov.br" },
-            { name: "Patrícia Martins Seabra", role: "Supervisor", phone: "4746-7225", email: "patricia.seabra@educacao.sp.gov.br" },
+           
             { name: "Raquel Tegedor Azevedo", role: "Supervisor", phone: "***", email: "raquel.azevedo@educacao.sp.gov.br" },
             { name: "Reni Gomes Pereira", role: "Supervisor", phone: "***", email: "reni.silva@educacao.sp.gov.br" }
         ]
@@ -42,16 +41,16 @@ const database = [
             { name: "Amanda Paula Rodrigues Teixeira", role: "PEC", phone: "***", email: "amanda.teixeira01@educacao.sp.gov.br" },
             { name: "Ari Oliveira Carvalho Junior", role: "PEC", phone: "4746-5036 / 6036", email: "ari.junior@educacao.sp.gov.br" },
             { name: "Camila Santos Rocha", role: "PEC", phone: "4746-7217", email: "camilasantosrocha@prof.educacao.sp.gov.br" },
-            { name: "Carlor M Prechecham", role: "PEC", phone: "4746-5044 / 6044", email: "precechan@prof.educacao.sp.gov.br" },
+            { name: "Carlos M Prechecham", role: "PEC", phone: "4746-5044 / 6044", email: "precechan@prof.educacao.sp.gov.br" },
             { name: "Claudia B.S Mirandola", role: "PEC", phone: "4746-5040 / 6040", email: "Claudia.Mirandola@educacao.sp.gov.br" },
             { name: "Fabio de Paula Ferraz", role: "PEC", phone: "4746-7222", email: "fabioferraz@prof.educacao.sp.gov.br" },
             { name: "Fabiana Gomes Ramos da Silva", role: "PEC", phone: "***", email: "fabiana.silva26@educacao.sp.gov.br" },
             { name: "Jessica Souza Kumagai", role: "PEC", phone: "4746-5042 / 6042", email: "jessica.kumagai@educacao.sp.gov.br" },
             { name: "Jose Vandei Silva de Oliveira", role: "PEC", phone: "4746-5037 / 6037", email: "josevandei@prof.educacao.sp.gov.br" },
-            { name: "Josiane Marques Moreira", role: "PEC", phone: "4746-5049 / 6049", email: "josiane.conceicao@educacao.sp.gov.br" },
+           
             { name: "Lais Guimarães Furst", role: "PEC", phone: "4746-7251", email: "lais.furst@educacao.sp.gov.br" },
             { name: "Marcelo Vicente C. da Silva", role: "PEC", phone: "***", email: "marcelo.silva24@servidor.educacao.sp.gov.br" },
-            { name: "Marcia Yoshiko Buto", role: "PEC", phone: "4746-7218", email: "marcia.buto@educacao.sp.gov.br" },
+            
             { name: "Marinete Pereira de Souza", role: "PEC", phone: "4746-5048 / 6048", email: "marineteoliveira@prof.educacao.sp.gov.br" },
             { name: "Midian de Almeida Pereira", role: "PEC", phone: "***", email: "midian.pereira@educacao.sp.gov.br" },
             { name: "Nubia Miranda da Silva", role: "PEC", phone: "***", email: "nubia.silva02@educacao.sp.gov.br" },
