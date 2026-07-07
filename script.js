@@ -17,7 +17,7 @@ const database = [
             { name: "Elaine Ferreira Cunha", role: "Supervisor", phone: "4746-5026", email: "elaine.cunha1@educacao.sp.gov.br" },
             { name: "Elisabete Gomes Benatti", role: "Supervisor", phone: "4746-5033", email: "elisabete.gomes01@educacao.sp.gov.br" },
             { name: "Elizabeth das Neves Alves Pereira", role: "Supervisor", phone: "4746-5024", email: "elizabeth.pereira@educacao.sp.gov.br" },
-            { name: "Gisele Gonçalves Callado", role: "Supervisor", phone: "4746-7224", email: "gisele.callado@educacao.sp.gov.br" },
+            { name: "Gisele Gonçalves Callado", role: "Supervisor", phone: "4746-7226", email: "gisele.callado@educacao.sp.gov.br" },
         
            
             { name: "Lethycia Regina Rodrigues", role: "Supervisor", phone: "4746-5028", email: "lethycia.rodrigues@educacao.sp.gov.br" },
