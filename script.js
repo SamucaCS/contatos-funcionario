@@ -27,7 +27,7 @@ const database = [
       {
         name: "Andrea R. Moraes do Carmo Oliveira",
         role: "Supervisor",
-        phone: "Sem ramal",
+        phone: "4746-7211",
         email: "andrea.moraes@educacao.sp.gov.br",
       },
       {
@@ -51,8 +51,8 @@ const database = [
       {
         name: "Elisangela Andrea Marques Araujo",
         role: "Supervisor",
-        phone: "",
-        email: "",
+        phone: "4746-7211",
+        email: "elisangela.araujo@educacao.sp.gov.br",
       },
       {
         name: "Elizabeth das Neves Alves Pereira",
@@ -124,7 +124,13 @@ const database = [
         name: "Shirlene Geordania Pagliai",
         role: "Supervisor",
         phone: "4746-6030",
-        email: "shirlenegeordania@prof.educacao.sp.gov.br",
+        email: "shirlenegeordania@educacao.sp.gov.br",
+      },
+      {
+        name: "Vanderlei Galindo",
+        role: "Supervisor",
+        phone: "4746-6031",
+        email: "vanderlei.galindo@educacao.sp.gov.br",
       },
     ],
   },
@@ -640,20 +646,31 @@ function renderContacts() {
       const card = document.createElement("div");
       card.className = "contact-card";
 
+      const hasPhone = member.phone && !/^\*+$/.test(member.phone.trim());
+      const hasEmail = member.email && !/^\*+$/.test(member.email.trim());
+
       card.innerHTML = `
                 <div class="role">${member.role}</div>
                 <div class="name">${member.name}</div>
 
                 <div class="contact-info">
-                    <div class="info-item">
+                    ${
+                      hasPhone
+                        ? `<div class="info-item">
                         <i class="fa-solid fa-phone"></i>
                         <a href="tel:${member.phone.replace(/[^0-9]/g, "")}">${member.phone}</a>
-                    </div>
+                    </div>`
+                        : ""
+                    }
 
-                    <div class="info-item">
+                    ${
+                      hasEmail
+                        ? `<div class="info-item">
                         <i class="fa-solid fa-envelope"></i>
                         <a href="mailto:${member.email}" title="Enviar email">${member.email}</a>
-                    </div>
+                    </div>`
+                        : ""
+                    }
                 </div>
             `;
       cardsGrid.appendChild(card);
