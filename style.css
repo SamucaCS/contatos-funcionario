@@ -93,10 +93,19 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.care-symbol:hover {
+  opacity: 0.8;
+}
+
+.care-symbol:hover .icon-circle {
+  transform: scale(1.05);
 }
 
 .icon-circle {
-  position: relative;
   width: 70px;
   height: 70px;
   background: #e8f5e9;
@@ -105,23 +114,12 @@ header {
   align-items: center;
   justify-content: center;
   border: 2px solid var(--sp-green);
+  transition: transform 0.2s;
 }
 
 .main-icon {
   font-size: 1.8rem;
   color: var(--sp-dark-green);
-}
-
-.sub-icon {
-  position: absolute;
-  bottom: -5px;
-  right: -5px;
-  font-size: 1rem;
-  background: var(--white);
-  color: var(--sp-blue);
-  padding: 4px;
-  border-radius: 50%;
-  border: 2px solid #e8f5e9;
 }
 
 .care-text {
@@ -170,7 +168,10 @@ header {
 .sector-header {
   display: flex;
   align-items: center;
-  margin-bottom: 25px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px 20px;
+  margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 2px solid #e9ecef;
 }
@@ -186,6 +187,55 @@ header {
 .sector-title i {
   color: var(--sp-green);
   opacity: 0.8;
+}
+
+.sector-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.sector-info i {
+  color: var(--sp-green);
+}
+
+.sector-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  background: var(--sp-dark-green);
+  color: var(--white);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+}
+
+.sector-cta:hover {
+  background: var(--sp-green);
+  transform: translateY(-1px);
+}
+
+.sector-cta i:first-child {
+  color: var(--sp-yellow);
+}
+
+.sector-cta-arrow {
+  transition: transform 0.2s;
+  font-size: 0.75rem;
+}
+
+.sector-cta:hover .sector-cta-arrow {
+  transform: translateX(3px);
 }
 
 .cards-container {
