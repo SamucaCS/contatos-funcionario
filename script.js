@@ -498,12 +498,6 @@ const database = [
         email: "suz.sepes@educacao.sp.gov.br",
       },
       {
-        name: "Gutemberg Melo",
-        role: "SEPES",
-        phone: "Sem ramal",
-        email: "gutemberg.melo@educacao.sp.gov.br",
-      },
-      {
         name: "Laiene Calvalcante do Prado",
         role: "Chefe de Seção / SEAPE",
         phone: "4746-7249",
@@ -515,6 +509,14 @@ const database = [
         phone: "4746-7245",
         email: "suz.sefrep@educacao.sp.gov.br",
       },
+
+      {
+        name: "Gutemberg Melo",
+        role: "SEPES",
+        phone: "Sem ramal",
+        email: "gutemberg.melo@educacao.sp.gov.br",
+      },
+      
       {
         name: "Aline Cardoso de Sá",
         role: "SEAPE",
