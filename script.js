@@ -526,7 +526,7 @@ const database = [
       {
         name: "Fran Galvão",
         role: "SEAPE",
-        phone: "4746-6009",
+        phone: "4746-5009",
         email: "francinalva.galvao@educacao.sp.gov.br",
       },
       {
@@ -539,7 +539,7 @@ const database = [
         name: "Mario Mendes Leal Filho",
         role: "SEAPE",
         phone: "4746-7255",
-        email: "mariomendes@professor.educacao.sp.gov.br",
+        email: "mario.mendes03@educacao.sp.gov.br",
       },
       {
         name: "Regina Ramos de Lima Vieira",
@@ -586,7 +586,7 @@ const database = [
       {
         name: "Iva Rosa Santos de Oliveira",
         role: "SEFREP",
-        phone: "4746-6013",
+        phone: "4746-5013",
         email: "iva.santos01@educacao.sp.gov.br",
       },
       {
