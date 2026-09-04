@@ -498,7 +498,7 @@ const database = [
         email: "suz.sepes@educacao.sp.gov.br",
       },
       {
-        name: "Laiene Calvalcante do Prado",
+        name: "Laiene Cavalcante do Pradoo",
         role: "Chefe de Seção / SEAPE",
         phone: "4746-7249",
         email: "suz.seape@educacao.sp.gov.br",
