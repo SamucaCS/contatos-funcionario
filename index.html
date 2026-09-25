@@ -4,64 +4,219 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contatos URE - Suzano</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    <meta
+      name="description"
+      content="Ramais e e-mails de todos os setores da Unidade Regional de Ensino de Suzano."
+    />
+    <meta
+      name="theme-color"
+      content="#ffffff"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#131f24"
+      media="(prefers-color-scheme: dark)"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/1/1a/Bras%C3%A3o_do_estado_de_S%C3%A3o_Paulo.svg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script>
+      // Aplica o tema salvo antes da pintura para evitar o "piscar" de cores.
+      try {
+        const tema = localStorage.getItem("tema");
+        if (tema === "light" || tema === "dark")
+          document.documentElement.dataset.theme = tema;
+      } catch (e) {}
+    </script>
   </head>
   <body>
-    <header>
-      <div class="header-container container">
-        <div class="brand-logo">
+    <div class="sp-stripe" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+
+    <div class="app">
+      <aside class="sidebar" aria-label="Setores">
+        <a class="brand" href="#topo">
           <img
+            class="brand-logo"
             src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Bras%C3%A3o_do_estado_de_S%C3%A3o_Paulo.svg"
-            alt="Brasão de São Paulo"
+            alt="Brasão do Estado de São Paulo"
           />
-        </div>
-
-        <div class="brand-text">
-          <h1>URE SUZANO</h1>
-          <div class="divider"></div>
-          <p>UNIDADE REGIONAL DE ENSINO</p>
-          <span class="sub-text">Governo do Estado de São Paulo</span>
-        </div>
-
-        <a
-          href="https://samucacs.github.io/fluxograma-ure/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="care-symbol"
-        >
-          <div class="icon-circle">
-            <i class="fa-solid fa-diagram-project main-icon"></i>
-          </div>
-          <span class="care-text">Veja nosso<br />Fluxograma</span>
+          <span class="brand-text">
+            <span class="brand-name">URE Suzano</span>
+            <span class="brand-sub">Unidade Regional de Ensino</span>
+          </span>
         </a>
-      </div>
 
-      <div class="sp-stripe">
-        <span class="black"></span>
-        <span class="white"></span>
-        <span class="red"></span>
-      </div>
-    </header>
+        <nav class="side-nav" id="side-nav" aria-label="Ir para o setor"></nav>
 
-    <main class="container">
-      <div id="directory-grid"></div>
-    </main>
+        <div class="side-footer">
+          <a
+            class="side-link"
+            href="https://samucacs.github.io/fluxograma-ure/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="side-link-icon"
+              ><i class="fa-solid fa-diagram-project"></i
+            ></span>
+            <span class="side-link-label">Fluxograma</span>
+          </a>
+          <button
+            class="side-link theme-toggle"
+            type="button"
+            data-theme-toggle
+          >
+            <span class="side-link-icon"><i class="fa-solid fa-moon"></i></span>
+            <span class="side-link-label">Tema escuro</span>
+          </button>
+        </div>
+      </aside>
 
-    <footer>
-      <div class="footer-content">
+      <header class="topbar" id="topo">
+        <div class="mobile-bar">
+          <a class="brand brand--compact" href="#topo">
+            <img
+              class="brand-logo"
+              src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Bras%C3%A3o_do_estado_de_S%C3%A3o_Paulo.svg"
+              alt="Brasão do Estado de São Paulo"
+            />
+            <span class="brand-text">
+              <span class="brand-name">URE Suzano</span>
+              <span class="brand-sub">Unidade Regional de Ensino</span>
+            </span>
+          </a>
+          <div class="mobile-actions">
+            <a
+              class="icon-btn"
+              href="https://samucacs.github.io/fluxograma-ure/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Veja nosso Fluxograma"
+              title="Veja nosso Fluxograma"
+            >
+              <i class="fa-solid fa-diagram-project"></i>
+            </a>
+            <button
+              class="icon-btn theme-toggle"
+              type="button"
+              data-theme-toggle
+            >
+              <i class="fa-solid fa-moon"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="hero">
+          <p class="eyebrow">Governo do Estado de São Paulo</p>
+          <h1 class="hero-title">Contatos da URE Suzano</h1>
+          <p class="hero-sub">
+            Ramais e e-mails de todos os setores, em um só lugar.
+          </p>
+        </div>
+      </header>
+
+      <main class="content" id="conteudo">
+        <div class="search-area" id="search-area">
+          <form class="search" role="search" id="search-form">
+            <label class="visually-hidden" for="search-input"
+              >Buscar contato</label
+            >
+            <i
+              class="fa-solid fa-magnifying-glass search-icon"
+              aria-hidden="true"
+            ></i>
+            <input
+              id="search-input"
+              class="search-input"
+              type="search"
+              placeholder="Nome, setor, pasta, escola ou ramal"
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <kbd class="search-kbd" aria-hidden="true">/</kbd>
+            <button
+              class="search-clear"
+              type="button"
+              id="search-clear"
+              aria-label="Limpar busca"
+              hidden
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </form>
+          <p class="search-status" id="search-status" aria-live="polite"></p>
+          <nav
+            class="chip-nav"
+            id="chip-nav"
+            aria-label="Ir para o setor"
+          ></nav>
+        </div>
+
+        <div id="directory"></div>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <div class="empty-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <h2>Nenhum contato encontrado</h2>
+          <p>Tente buscar pelo nome, setor, pasta, escola ou ramal.</p>
+          <button class="btn btn--primary" type="button" data-clear-search>
+            Limpar busca
+          </button>
+        </div>
+      </main>
+
+      <aside class="rail" aria-label="Informações rápidas">
+        <section class="widget">
+          <h2 class="widget-title">Resumo</h2>
+          <div class="stats" id="stats"></div>
+        </section>
+
+        <section class="widget" id="duty-widget">
+          <div class="widget-head">
+            <h2 class="widget-title">Plantão hoje</h2>
+            <span class="widget-day" id="duty-day"></span>
+          </div>
+          <ul class="duty-list" id="duty-list"></ul>
+        </section>
+
+        <section class="widget">
+          <h2 class="widget-title">Números úteis</h2>
+          <ul class="useful-list" id="useful-list"></ul>
+        </section>
+
+        <section class="widget">
+          <h2 class="widget-title">Páginas da URE</h2>
+          <div class="quick-links" id="quick-links"></div>
+        </section>
+      </aside>
+
+      <footer class="footer">
         <p><strong>Diretoria de Ensino - Região de Suzano</strong></p>
         <p>Compromisso com a educação pública de qualidade.</p>
-      </div>
-    </footer>
+      </footer>
+    </div>
 
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden>
+      <i class="fa-solid fa-circle-check"></i>
+      <span id="toast-text"></span>
+    </div>
+
+    <script src="dados.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

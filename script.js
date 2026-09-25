@@ -1,686 +1,802 @@
-const database = [
-  {
-    sector: "Gabinete / Assessoria",
-    icon: "fa-building",
-    members: [
-      {
-        name: "GABINETE",
-        role: "Recepção Gabinete",
-        phone: "4746-7214 | 4746-7220",
-        email: "suz@educacao.sp.gov.br",
-      },
-      {
-        name: "GABINETE",
-        role: "Recepção Gabinete",
-        phone: "4746-7220",
-        email: "suz@educacao.sp.gov.br",
-      },
-    ],
-  },
-  {
-    sector: "ESE - Equipe de Supervisão",
-    icon: "fa-eye",
-    info: "Plantão: 4746-7227 / 4746-7228",
-    link: "https://pagina-supervisao-ese.vercel.app/",
-    linkLabel: "Conheça nossa Supervisão",
-    members: [
-      {
-        name: "Andrea R. Moraes do Carmo Oliveira",
-        role: "Supervisor",
-        phone: "4746-7211",
-        email: "andrea.moraes@educacao.sp.gov.br",
-      },
-      {
-        name: "Cintia Souza Borges",
-        role: "Supervisor",
-        phone: "4746-7224",
-        email: "cintia.borges01@educacao.sp.gov.br",
-      },
-      {
-        name: "Elaine Ferreira Cunha",
-        role: "Supervisor",
-        phone: "4746-6026",
-        email: "elaine.cunha1@educacao.sp.gov.br",
-      },
-      {
-        name: "Elisabete Gomes Benatti",
-        role: "Supervisor",
-        phone: "4746-6033",
-        email: "elisabete.gomes01@educacao.sp.gov.br",
-      },
-      {
-        name: "Elisangela Andrea Marques Araujo",
-        role: "Supervisor",
-        phone: "4746-7211",
-        email: "elisangela.araujo@educacao.sp.gov.br",
-      },
-      {
-        name: "Elizabeth das Neves Alves Pereira",
-        role: "Supervisor",
-        phone: "4746-6024",
-        email: "elizabeth.pereira@educacao.sp.gov.br",
-      },
-      {
-        name: "Fabiana Vanelli Candido",
-        role: "Supervisor",
-        phone: "4746-7225",
-        email: "fabiana.candido@educacao.sp.gov.br",
-      },
-      {
-        name: "Gisele Gonçalves Callado",
-        role: "Supervisor",
-        phone: "4746-7226",
-        email: "gisele.callado@educacao.sp.gov.br",
-      },
-      {
-        name: "Lethycia Regina Rodrigues",
-        role: "Supervisor",
-        phone: "4746-6020",
-        email: "lethycia.rodrigues@educacao.sp.gov.br",
-      },
-      {
-        name: "Mirela de Oliveira Roman",
-        role: "Supervisor",
-        phone: "4746-5023",
-        email: "mirela.roman@educacao.sp.gov.br",
-      },
-      {
-        name: "Mirian Miya",
-        role: "Supervisor",
-        phone: "4746-7213",
-        email: "mirian.miya@educacao.sp.gov.br",
-      },
-      {
-        name: "Núbia Ferreira de Melo",
-        role: "Supervisor",
-        phone: "4746-5025",
-        email: "nubia.melo@educacao.sp.gov.br",
-      },
-      {
-        name: "Patrícia Ferreira",
-        role: "Supervisor",
-        phone: "4746-6029",
-        email: "patricia.ferreira04@educacao.sp.gov.br",
-      },
-      {
-        name: "Raquel Tegedor Azevedo",
-        role: "Supervisor",
-        phone: "4746-6032",
-        email: "raquel.azevedo@educacao.sp.gov.br",
-      },
-      {
-        name: "Reni Gomes Pereira",
-        role: "Supervisor",
-        phone: "4746-6027",
-        email: "reni.silva@educacao.sp.gov.br",
-      },
-      {
-        name: "Rosângela Simões dos Santos",
-        role: "Supervisor",
-        phone: "4746-7223",
-        email: "rosangela.santos11@educacao.sp.gov.br",
-      },
-      {
-        name: "Shirlene Geordania Pagliai",
-        role: "Supervisor",
-        phone: "4746-6030",
-        email: "shirlenegeordania@educacao.sp.gov.br",
-      },
-      {
-        name: "Vanderlei Galindo",
-        role: "Supervisor",
-        phone: "4746-6031",
-        email: "vanderlei.galindo@educacao.sp.gov.br",
-      },
-    ],
-  },
-  {
-    sector: "EEC - Especialistas em Currículo",
-    icon: "fa-book",
-    members: [
-      {
-        name: "Daniela Lusni de Souza",
-        role: "CEC",
-        phone: "4746-7232",
-        email: "daniella.souza@educacao.sp.gov.br",
-      },
-      {
-        name: "Alessandra Wink",
-        role: "PEC",
-        phone: "4746-5041 / 6041",
-        email: "alessandra.wink@educacao.sp.gov.br",
-      },
-      {
-        name: "Ana Deise Lavor Firmino",
-        role: "PEC",
-        phone: "4746-5050 / 6050",
-        email: "ana.firmino@educacao.sp.gov.br",
-      },
-      {
-        name: "Amanda Paula Rodrigues Teixeira",
-        role: "PEC",
-        phone: "***",
-        email: "amanda.teixeira01@educacao.sp.gov.br",
-      },
-      {
-        name: "Ari Oliveira Carvalho Junior",
-        role: "PEC",
-        phone: "4746-5036 / 6036",
-        email: "ari.junior@educacao.sp.gov.br",
-      },
-      {
-        name: "Camila Santos Rocha",
-        role: "PEC",
-        phone: "4746-7217",
-        email: "camilasantosrocha@prof.educacao.sp.gov.br",
-      },
-      {
-        name: "Carlos M Prechecham",
-        role: "PEC",
-        phone: "4746-5044 / 6044",
-        email: "precechan@prof.educacao.sp.gov.br",
-      },
-      {
-        name: "Claudia B.S Mirandola",
-        role: "PEC",
-        phone: "4746-5040 / 6040",
-        email: "Claudia.Mirandola@educacao.sp.gov.br",
-      },
-      {
-        name: "Fabio de Paula Ferraz",
-        role: "PEC",
-        phone: "4746-7222",
-        email: "fabioferraz@prof.educacao.sp.gov.br",
-      },
-      {
-        name: "Fabiana Gomes Ramos da Silva",
-        role: "PEC",
-        phone: "***",
-        email: "fabiana.silva26@educacao.sp.gov.br",
-      },
-      {
-        name: "Jessica Souza Kumagai",
-        role: "PEC",
-        phone: "4746-5042 / 6042",
-        email: "jessica.kumagai@educacao.sp.gov.br",
-      },
-      {
-        name: "Jose Vandei Silva de Oliveira",
-        role: "PEC",
-        phone: "4746-5037 / 6037",
-        email: "josevandei@prof.educacao.sp.gov.br",
-      },
+// Monta a página a partir de dados.js (database, quickLinks, usefulNumbers).
+(function () {
+  "use strict";
 
-      {
-        name: "Lais Guimarães Furst",
-        role: "PEC",
-        phone: "4746-7251",
-        email: "lais.furst@educacao.sp.gov.br",
-      },
-      {
-        name: "Marcelo Vicente C. da Silva",
-        role: "PEC",
-        phone: "***",
-        email: "marcelo.silva24@servidor.educacao.sp.gov.br",
-      },
+  const WEEKDAYS = [
+    "Domingo",
+    "Segunda-feira",
+    "Terça-feira",
+    "Quarta-feira",
+    "Quinta-feira",
+    "Sexta-feira",
+    "Sábado",
+  ];
+  const LOWERCASE_WORDS = new Set(["de", "da", "do", "das", "dos", "e"]);
+  const UPPERCASE_WORDS = new Set([
+    "apae",
+    "cel",
+    "ceu",
+    "ee",
+    "eja",
+    "emef",
+    "etec",
+    "pei",
+    "sesi",
+    "senai",
+  ]);
+  const ROMAN_NUMERAL = /^(i|ii|iii|iv|v|vi|vii|viii|ix|x)$/i;
+  const SHIFT_PATTERN =
+    /([2-6])\s*ª\s*feira\s+das\s+(\d{1,2})h(\d{2})?\s*(?:as|às|a)\s+(\d{1,2})h(\d{2})?/i;
 
-      {
-        name: "Marinete Pereira de Souza",
-        role: "PEC",
-        phone: "4746-5048 / 6048",
-        email: "marineteoliveira@prof.educacao.sp.gov.br",
-      },
-      {
-        name: "Midian de Almeida Pereira",
-        role: "PEC",
-        phone: "***",
-        email: "midian.pereira@educacao.sp.gov.br",
-      },
-      {
-        name: "Nubia Miranda da Silva",
-        role: "PEC",
-        phone: "***",
-        email: "nubia.silva02@educacao.sp.gov.br",
-      },
-      {
-        name: "Paula Margarete Alves",
-        role: "PEC",
-        phone: "4746-7216",
-        email: "paula.alves02@educacao.sp.gov.br",
-      },
-      {
-        name: "Priscila Ribeiro da Silva",
-        role: "PEC",
-        phone: "***",
-        email: "priscila.silva19@educacao.sp.gov.br",
-      },
-      {
-        name: "Sandra Regina Soares Clemente",
-        role: "PEC",
-        phone: "4746-5038",
-        email: "sandra.clemente@educacao.sp.gov.br",
-      },
-      {
-        name: "Thais Aleksejuk Bernardes",
-        role: "PEC",
-        phone: "4746-5043 / 6043",
-        email: "aleksejuk@prof.educacao.sp.gov.br",
-      },
-      {
-        name: "Valeria Santos França",
-        role: "PEC",
-        phone: "4746-5039 / 6039",
-        email: "Valeria.Franca@educacao.sp.gov.br",
-      },
-    ],
-  },
-  {
-    sector: "SEGRE - Gestão da Rede Escolar",
-    icon: "fa-school",
-    members: [
-      {
-        name: "Maria Leonor Prado Callil",
-        role: "Chefe de Serviço",
-        phone: "4746-7237",
-        email: "suz.segre@educacao.sp.gov.br",
-      },
-      {
-        name: "Rodrigo Henrique M da Silva",
-        role: "Chefe de Seção / SEVESC",
-        phone: "4746-7239",
-        email: "suz.sevesc@educacao.sp.gov.br",
-      },
-      {
-        name: "Angela Oliveira",
-        role: "SEVESC",
-        phone: "4746-7260",
-        email: "angela.oliveira@educacao.sp.gov.br",
-      },
-      {
-        name: "Leonor Akiko Kamimura Uono",
-        role: "SEVESC",
-        phone: "4746-6019",
-        email: "Leonor.uono@educacao.sp.gov.br",
-      },
-      {
-        name: "Vanessa Pereira A. Gil",
-        role: "Chefe de Seção / SEMAT",
-        phone: "4746-7242",
-        email: "suz.semat@educacao.sp.gov.br",
-      },
-      {
-        name: "Henriqueta Rafaela S. Candido",
-        role: "SEMAT",
-        phone: "4746-7241",
-        email: "suz.semat@educacao.sp.gov.br",
-      },
-      {
-        name: "Joana Marrão",
-        role: "SEMAT",
-        phone: "4746-5056",
-        email: "joana.marrao@educacao.sp.gov.br",
-      },
-      {
-        name: "Ronaldo Spinola Nunes",
-        role: "SEMAT / Assistente",
-        phone: "4746-6016",
-        email: "ronaldo.nunes@educacao.sp.gov.br",
-      },
-      {
-        name: "Geovanna D'arc da Silva",
-        role: "SEMAT / Estagiário",
-        phone: "*",
-        email: "es.geovanna@educacao.sp.gov.br",
-      },
-    ],
-  },
-  {
-    sector: "SEINTEC - Tecnologia e Info",
-    icon: "fa-laptop",
-    members: [
-      {
-        name: "Carlos Alexandre da Silva Camillo",
-        role: "Chefe de Serviço / SEINTEC",
-        phone: "4746-5021",
-        email: "suz.seintec@educacao.sp.gov.br",
-      },
-      {
-        name: "Samuel Carvalho da Silva",
-        role: " Chefe de Seção / SETEC",
-        phone: "4746-7258",
-        email: "suz.setec@educacao.sp.gov.br",
-      },
-      {
-        name: "Luiz Fabiano Camillo ",
-        role: "Anlista de suporte Pleno",
-        phone: "4746-7240",
-        email: "suz.setec@educacao.sp.gov.br",
-      },
-      {
-        name: "Bryan dos Santos Nascimento",
-        role: "SEINTEC / Estagiário",
-        phone: "",
-        email: "suz.seintec@educacao.sp.gov.br",
-      },
-    ],
-  },
-  {
-    sector: "SEAFIN - Admin e Finanças",
-    icon: "fa-calculator",
-    info: "Protocolo: 4746-7210",
-    members: [
-      {
-        name: "Elaine Cristina Lopes",
-        role: "Chefe de Serviço",
-        phone: "4746-7231",
-        email: "suz.seafin@educacao.sp.gov.br",
-      },
-      {
-        name: "Ana Vitorina Dias",
-        role: "Chefe de Seção / SEFIN",
-        phone: "4746-7259",
-        email: "suz.sefin@educacao.sp.gov.br",
-      },
-      {
-        name: "Renato Alexandre Fumes",
-        role: "SEFIN",
-        phone: "4746-5052",
-        email: "suz.sefin@educacao.sp.gov.br",
-      },
+  const now = new Date();
+  const today = now.getDay();
+  const minutesNow = now.getHours() * 60 + now.getMinutes();
 
-      {
-        name: "Joana D'Arc Custódia ",
-        role: "SEFIN",
-        phone: "4746-7252",
-        email: "suz.sefin@educacao.sp.gov.br",
-      },
+  const directory = document.getElementById("directory");
+  const sideNav = document.getElementById("side-nav");
+  const chipNav = document.getElementById("chip-nav");
+  const searchArea = document.getElementById("search-area");
+  const searchForm = document.getElementById("search-form");
+  const searchInput = document.getElementById("search-input");
+  const searchClear = document.getElementById("search-clear");
+  const searchStatus = document.getElementById("search-status");
+  const emptyState = document.getElementById("empty-state");
+  const toast = document.getElementById("toast");
+  const toastText = document.getElementById("toast-text");
 
-      {
-        name: "Jessica Muniz D. Ferreira",
-        role: "Chefe de Seção / SECOMSE",
-        phone: "4746-5057",
-        email: "suz.secomse@educacao.sp.gov.br",
-      },
-      {
-        name: "Veridiana dos Santos Vigantzky",
-        role: "SECOMSE",
-        phone: "4746-5011",
-        email: "suz.secomse@educacao.sp.gov.br",
-      },
-      {
-        name: "Zenailde",
-        role: "SECOMSE",
-        phone: "4746-5002",
-        email: "suz.secomse@educacao.sp.gov.br",
-      },
-      {
-        name: "Daniela",
-        role: "SECOMSE",
-        phone: "4746-6005",
-        email: "suz.secomse@educacao.sp.gov.br",
-      },
-      {
-        name: "Fábio Castro",
-        role: "SECOMSE",
-        phone: "4746-7247",
-        email: "suz.secomse@educacao.sp.gov.br",
-      },
-      {
-        name: "Wlanyse Pantoja Beckman",
-        role: "SEFREP",
-        phone: "4746-5001",
-        email: "wlanyse.beckman01@educacao.sp.gov.br",
-      },
-      {
-        name: "Joana D'arc Custódio",
-        role: "SEFREP",
-        phone: "4746-7252",
-        email: "Joana.custodio@educacao.sp.gov.br",
-      },
-      {
-        name: "Andréia Lopes dos Santos",
-        role: "SEFREP",
-        phone: "4746-5004",
-        email: "andreia.santos02@educacao.sp.gov.br",
-      },
-      {
-        name: "Dulceleia Archanjo Alves",
-        role: "SEAFIN",
-        phone: "4746-7248",
-        email: "dulcileia.oliveira@educacao.sp.gov.br",
-      },
-    ],
-  },
-  {
-    sector: "SEOM - Obras e Manutenção",
-    icon: "fa-wrench",
-    members: [
-      {
-        name: "Lilian Barros Ramos de Oliveira",
-        role: "Chefe de Serviço / SEOM",
-        phone: "4746-7238",
-        email: "suz.seom@educacao.sp.gov.br",
-      },
-      {
-        name: "Dirnê de Sá Moraes Silva",
-        role: "Chefe de Seção / SEFISC",
-        phone: "4746-5003",
-        email: "suz.sefisc@educacao.sp.gov.br",
-      },
-      {
-        name: "Jefferson Paulino",
-        role: "SEFISC",
-        phone: "4746-6047",
-        email: "suz.seom@educacao.sp.gov.br",
-      },
-      {
-        name: "Elias Correia Francisco",
-        role: "SEOM / Assistente",
-        phone: "Sem ramal",
-        email: "elias.francisco@educacao.sp.gov.br",
-      },
-      {
-        name: "Amilton Chagas da Silva Vitor",
-        role: "SEOM / Assistente",
-        phone: "4746-6047",
-        email: "suz.seom@educacao.sp.gov.br",
-      },
-    ],
-  },
-  {
-    sector: "SEPES - Serviço de Pessoas",
-    icon: "fa-users",
-    members: [
-      {
-        name: "Taynã Iara da Silva Pinto Moura",
-        role: "Chefe de Serviço / Sepes",
-        phone: "4746-5006",
-        email: "suz.sepes@educacao.sp.gov.br",
-      },
-      {
-        name: "Laiene Cavalcante do Pradoo",
-        role: "Chefe de Seção / SEAPE",
-        phone: "4746-7249",
-        email: "suz.seape@educacao.sp.gov.br",
-      },
-      {
-        name: "Cristina do Vale",
-        role: "Chefe de Seção / SEFREP",
-        phone: "4746-7245",
-        email: "suz.sefrep@educacao.sp.gov.br",
-      },
+  // ---------- Utilitários ----------
 
-      {
-        name: "Gutemberg Melo",
-        role: "SEPES",
-        phone: "Sem ramal",
-        email: "gutemberg.melo@educacao.sp.gov.br",
-      },
-      
-      {
-        name: "Aline Cardoso de Sá",
-        role: "SEAPE",
-        phone: "4746-7250",
-        email: "aline.sa02@educacao.sp.gov.br",
-      },
-      {
-        name: "Fran Galvão",
-        role: "SEAPE",
-        phone: "4746-5009",
-        email: "francinalva.galvao@educacao.sp.gov.br",
-      },
-      {
-        name: "Luiz Barros Orfão",
-        role: "SEAPE",
-        phone: "4746-5010",
-        email: "luiz.orfao@educacao.sp.gov.br",
-      },
-      {
-        name: "Mario Mendes Leal Filho",
-        role: "SEAPE",
-        phone: "4746-7255",
-        email: "mario.mendes03@educacao.sp.gov.br",
-      },
-      {
-        name: "Regina Ramos de Lima Vieira",
-        role: "SEAPE",
-        phone: "4746-5012",
-        email: "regina.vieira04@educacao.sp.gov.br",
-      },
-      {
-        name: "Rita de Cássia Castro Souza",
-        role: "SEAPE",
-        phone: "4746-7230",
-        email: "rita.souza05@educacao.sp.gov.br",
-      },
-      {
-        name: "Maria Inaídes Pereira Góes",
-        role: "SEAPE",
-        phone: "4746-7254",
-        email: "maria.goes08@educacao.sp.gov.br",
-      },
-      {
-        name: "Angelica Rodrigues Sousa de Oliveira",
-        role: "SEFREP",
-        phone: "4746-5015",
-        email: "angelica.oliveira04@educacao.sp.gov.br",
-      },
-      {
-        name: "Eliane Durval da Silva",
-        role: "SEFREP",
-        phone: "4746-7234",
-        email: "eliane.silva01@educacao.sp.gov.br",
-      },
-      {
-        name: "Clayton Souza Barriento",
-        role: "SEFREP",
-        phone: "4746-5018",
-        email: "clayton.barriento@educacao.sp.gov.br",
-      },
-      {
-        name: "Wilma Aparecida de Rezende",
-        role: "SEFREP",
-        phone: "4746-7229",
-        email: "wilma.rezende@educacao.sp.gov.br",
-      },
-      {
-        name: "Iva Rosa Santos de Oliveira",
-        role: "SEFREP",
-        phone: "4746-5013",
-        email: "iva.santos01@educacao.sp.gov.br",
-      },
-      {
-        name: "Erika Karen Vitor F. da Silva",
-        role: "SEFREP",
-        phone: "4746-7215",
-        email: "erika.barbosa@educacao.sp.gov.br",
-      },
-      {
-        name: "Daniela Soares Silva Resende",
-        role: "SEFREP",
-        phone: "4746-5017",
-        email: "daniela.resende@educacao.sp.gov.br",
-      },
-    ],
-  },
-];
+  function el(tag, props, children) {
+    const node = document.createElement(tag);
+    Object.entries(props || {}).forEach(([key, value]) => {
+      if (value == null || value === false) return;
+      if (key === "className") node.className = value;
+      else if (key === "text") node.textContent = value;
+      else node.setAttribute(key, value === true ? "" : value);
+    });
+    [].concat(children || []).forEach((child) => {
+      if (child != null && child !== false) node.append(child);
+    });
+    return node;
+  }
 
-const container = document.getElementById("directory-grid");
+  const icon = (name) =>
+    el("i", { className: `fa-solid ${name}`, "aria-hidden": "true" });
 
-function renderContacts() {
-  container.innerHTML = "";
+  const normalize = (text) =>
+    String(text || "")
+      .normalize("NFD")
+      .replace(/[̀-ͯ]/g, "")
+      .toLowerCase();
 
-  database.forEach((dept) => {
-    const section = document.createElement("div");
-    section.className = "sector-section";
+  const slug = (text) =>
+    normalize(text)
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "");
 
-    const headerDiv = document.createElement("div");
-    headerDiv.className = "sector-header";
-    headerDiv.innerHTML = `<h2 class="sector-title"><i class="fa-solid ${dept.icon}"></i> ${dept.sector}</h2>`;
+  // Permite quebrar e-mails longos antes de "@" e "." em vez de no meio da palavra.
+  function breakable(text) {
+    const fragment = document.createDocumentFragment();
+    text.split(/(?=[@.])/).forEach((part, i) => {
+      if (i > 0) fragment.append(document.createElement("wbr"));
+      fragment.append(part);
+    });
+    return fragment;
+  }
 
-    if (dept.link) {
-      const cta = document.createElement("a");
-      cta.className = "sector-cta";
-      cta.href = dept.link;
-      cta.target = "_blank";
-      cta.rel = "noopener noreferrer";
-      cta.innerHTML = `
-                <i class="fa-solid fa-star"></i>
-                ${dept.linkLabel}
-                <i class="fa-solid fa-arrow-right sector-cta-arrow"></i>
-            `;
-      headerDiv.appendChild(cta);
+  // "", "*" e "***" significam "sem informação".
+  const hasValue = (value) =>
+    typeof value === "string" && !/^\**$/.test(value.trim());
+
+  function initials(name) {
+    const parts = name
+      .trim()
+      .split(/\s+/)
+      .filter((part) => !LOWERCASE_WORDS.has(part.toLowerCase()));
+    if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+  }
+
+  function titleCase(text) {
+    return text
+      .toLowerCase()
+      .split(/\s+/)
+      .map((word, i) => {
+        const bare = word.replace(/[^\p{L}]/gu, "");
+        if (UPPERCASE_WORDS.has(bare) || ROMAN_NUMERAL.test(bare))
+          return word.toUpperCase();
+        if (i > 0 && LOWERCASE_WORDS.has(word)) return word;
+        return word.replace(/\p{L}/u, (letter) => letter.toUpperCase());
+      })
+      .join(" ");
+  }
+
+  // "ESE - Equipe de Supervisão" -> { code: "ESE", label: "Equipe de Supervisão" }
+  function splitSector(name) {
+    const [code, ...rest] = name.split(" - ");
+    if (rest.length) return { code, label: rest.join(" - ") };
+    const [first, ...others] = name.split(" / ");
+    return { code: first, label: others.join(" / ") };
+  }
+
+  // Liga para o primeiro número da lista (DDD 11 quando não informado).
+  function phoneHref(phone) {
+    const digits = phone.split(/[|/]/)[0].replace(/\D/g, "");
+    if (digits.length === 8) return `tel:+5511${digits}`;
+    if (digits.length >= 10) return `tel:+55${digits}`;
+    return null;
+  }
+
+  function parseShift(shift) {
+    if (!hasValue(shift)) return null;
+    const match = shift.match(SHIFT_PATTERN);
+    if (!match)
+      return {
+        none: true,
+        label: /s\/?\s*plant/i.test(shift) ? "Sem plantão" : shift,
+      };
+    const [, weekday, h1, m1 = "00", h2, m2 = "00"] = match;
+    const hour = (h, m) => `${Number(h)}h${m === "00" ? "" : m}`;
+    const time = `${hour(h1, m1)}–${hour(h2, m2)}`;
+    return {
+      day: Number(weekday) - 1,
+      start: Number(h1) * 60 + Number(m1),
+      end: Number(h2) * 60 + Number(m2),
+      time,
+      label: `${weekday}ª feira · ${time}`,
+    };
+  }
+
+  // ---------- Cópia e aviso ----------
+
+  let toastTimer;
+  function showToast(message) {
+    toastText.textContent = message;
+    toast.hidden = false;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => (toast.hidden = true), 2200);
+  }
+
+  async function copyText(text) {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch (error) {
+      const area = el("textarea", {
+        readonly: true,
+        style: "position:fixed;opacity:0",
+      });
+      area.value = text;
+      document.body.append(area);
+      area.select();
+      const ok = document.execCommand("copy");
+      area.remove();
+      return ok;
+    }
+  }
+
+  function copyButton(value, label, name) {
+    return el(
+      "button",
+      {
+        className: "copy-btn",
+        type: "button",
+        "data-copy": value,
+        "data-copy-label": label,
+        "aria-label": `Copiar ${label.toLowerCase()} de ${name}`,
+        title: `Copiar ${label.toLowerCase()}`,
+      },
+      icon("fa-copy"),
+    );
+  }
+
+  // ---------- Card de pessoa ----------
+
+  function contactRow({ href, iconName, text, copy }) {
+    const content = [
+      icon(iconName),
+      el("span", { className: "contact-text" }, breakable(text)),
+    ];
+    const link = href
+      ? el("a", { className: "contact-link", href }, content)
+      : el("span", { className: "contact-link" }, content);
+    return el("div", { className: "contact" }, [link, copy]);
+  }
+
+  function schoolsBlock(schools) {
+    const lists = [
+      ["Públicas", schools.public],
+      ["Particulares", schools.private],
+      ["Substituição de rotina", schools.substitute],
+    ].filter(([, list]) => list && list.length);
+    if (!lists.length) return null;
+
+    const total =
+      (schools.public || []).length + (schools.private || []).length;
+    const summaryText = total ? `Escolas (${total})` : "Substituição de rotina";
+    return el("details", { className: "schools" }, [
+      el("summary", {}, [
+        icon("fa-school"),
+        summaryText,
+        icon("fa-chevron-down"),
+      ]),
+      el(
+        "div",
+        { className: "schools-body" },
+        lists.map(([label, list]) =>
+          el("div", {}, [
+            el("p", { className: "schools-label", text: label }),
+            el(
+              "ul",
+              { className: "schools-list" },
+              list.map((school) => el("li", { text: titleCase(school) })),
+            ),
+          ]),
+        ),
+      ),
+    ]);
+  }
+
+  function personCard(member, id) {
+    const name = member.name.trim();
+    const role = member.role.trim();
+    const shift = parseShift(member.shift);
+    const onDutyToday = shift && !shift.none && shift.day === today;
+    const onDutyNow =
+      onDutyToday && minutesNow >= shift.start && minutesNow < shift.end;
+
+    const tags = [];
+    if (shift) {
+      if (onDutyToday) {
+        tags.push(
+          el("span", { className: "tag tag--today" }, [
+            onDutyNow
+              ? el("span", { className: "live-dot", "aria-hidden": "true" })
+              : icon("fa-clock"),
+            onDutyNow
+              ? `De plantão agora · ${shift.time}`
+              : `Plantão hoje · ${shift.time}`,
+          ]),
+        );
+      } else {
+        tags.push(
+          el("span", { className: "tag" }, [icon("fa-clock"), shift.label]),
+        );
+      }
+    }
+    if (hasValue(member.note)) {
+      tags.push(
+        el("span", { className: "tag tag--warn" }, [
+          icon("fa-triangle-exclamation"),
+          member.note,
+        ]),
+      );
+    }
+    (member.folders || []).forEach((folder) =>
+      tags.push(el("span", { className: "tag tag--folder", text: folder })),
+    );
+
+    const contacts = [];
+    if (hasValue(member.phone)) {
+      const href = phoneHref(member.phone);
+      contacts.push(
+        contactRow({
+          href,
+          iconName: "fa-phone",
+          text: member.phone.trim(),
+          copy: href ? copyButton(member.phone.trim(), "Telefone", name) : null,
+        }),
+      );
+    }
+    if (hasValue(member.email)) {
+      const email = member.email.trim();
+      contacts.push(
+        contactRow({
+          href: `mailto:${email}`,
+          iconName: "fa-envelope",
+          text: email,
+          copy: copyButton(email, "E-mail", name),
+        }),
+      );
+    }
+    if (!contacts.length) {
+      const empty = contactRow({
+        iconName: "fa-circle-info",
+        text: "Telefone e e-mail não cadastrados",
+      });
+      empty.classList.add("contact--empty");
+      contacts.push(empty);
     }
 
-    section.appendChild(headerDiv);
+    return {
+      shift,
+      onDutyToday,
+      onDutyNow,
+      node: el(
+        "article",
+        { className: `person${onDutyToday ? " person--duty" : ""}`, id },
+        [
+          el("div", { className: "person-head" }, [
+            el("span", {
+              className: "avatar",
+              "aria-hidden": "true",
+              text: initials(name),
+            }),
+            el("div", {}, [
+              el("p", { className: "person-role", text: role }),
+              el("h3", { className: "person-name", text: name }),
+            ]),
+          ]),
+          tags.length ? el("div", { className: "tags" }, tags) : null,
+          el("div", { className: "contacts" }, contacts),
+          member.schools ? schoolsBlock(member.schools) : null,
+        ],
+      ),
+    };
+  }
 
-    if (dept.info) {
-      const info = document.createElement("p");
-      info.className = "sector-info";
-      info.innerHTML = `<i class="fa-solid fa-circle-info"></i> ${dept.info}`;
-      section.appendChild(info);
-    }
+  function searchTextFor(member, sector) {
+    const schools = member.schools || {};
+    const phone = member.phone || "";
+    return normalize(
+      [
+        member.name,
+        member.role,
+        phone,
+        phone.replace(/[^\d|/]/g, ""),
+        member.email,
+        member.group,
+        member.shift,
+        member.note,
+        ...(member.folders || []),
+        ...(schools.public || []),
+        ...(schools.private || []),
+        ...(schools.substitute || []),
+        sector.sector,
+      ]
+        .filter(Boolean)
+        .join(" "),
+    );
+  }
 
-    const cardsGrid = document.createElement("div");
-    cardsGrid.className = "cards-container";
+  // ---------- Setores ----------
 
-    dept.members.forEach((member) => {
-      const card = document.createElement("div");
-      card.className = "contact-card";
+  const usedIds = new Set();
+  function uniqueId(base) {
+    let id = base;
+    for (let n = 2; usedIds.has(id); n++) id = `${base}-${n}`;
+    usedIds.add(id);
+    return id;
+  }
 
-      const hasPhone = member.phone && !/^\*+$/.test(member.phone.trim());
-      const hasEmail = member.email && !/^\*+$/.test(member.email.trim());
+  const sectors = database.map((sector, index) => {
+    const tone = `tone-${sector.color || "green"}`;
+    const { code, label } = splitSector(sector.sector);
+    const id = uniqueId(`setor-${slug(code)}`);
+    const number = String(index + 1).padStart(2, "0");
 
-      card.innerHTML = `
-                <div class="role">${member.role}</div>
-                <div class="name">${member.name}</div>
+    const cards = [];
+    const makeCard = (member) => {
+      const card = personCard(member, uniqueId(`pessoa-${slug(member.name)}`));
+      cards.push({ ...card, member, text: searchTextFor(member, sector) });
+      return card.node;
+    };
 
-                <div class="contact-info">
-                    ${
-                      hasPhone
-                        ? `<div class="info-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <a href="tel:${member.phone.replace(/[^0-9]/g, "")}">${member.phone}</a>
-                    </div>`
-                        : ""
-                    }
+    const ungrouped = sector.members.filter((member) => !member.group);
+    const groupNames = [
+      ...new Set(sector.members.filter((m) => m.group).map((m) => m.group)),
+    ].sort((a, b) => a.localeCompare(b, "pt-BR"));
 
-                    ${
-                      hasEmail
-                        ? `<div class="info-item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <a href="mailto:${member.email}" title="Enviar email">${member.email}</a>
-                    </div>`
-                        : ""
-                    }
-                </div>
-            `;
-      cardsGrid.appendChild(card);
+    const body = [];
+    if (ungrouped.length)
+      body.push(
+        el("div", { className: "people-grid" }, ungrouped.map(makeCard)),
+      );
+
+    const groups = groupNames.map((groupName) => {
+      const members = sector.members
+        .filter((member) => member.group === groupName)
+        .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
+      const firstCard = cards.length;
+      const grid = el(
+        "div",
+        { className: "people-grid" },
+        members.map(makeCard),
+      );
+      const countNode = el("span", {
+        className: "group-count",
+        text: members.length,
+      });
+      const node = el("div", { className: "group" }, [
+        el("h3", { className: "group-title" }, [
+          el("span", { text: groupName }),
+          countNode,
+        ]),
+        grid,
+      ]);
+      body.push(node);
+      return { node, countNode, cards: cards.slice(firstCard) };
     });
 
-    section.appendChild(cardsGrid);
-    container.appendChild(section);
-  });
-}
+    const eyebrow = el("p", { className: "sector-eyebrow" });
+    const cta = sector.link
+      ? el(
+          "a",
+          {
+            className: "btn btn--on-color",
+            href: sector.link,
+            target: "_blank",
+            rel: "noopener noreferrer",
+          },
+          [icon("fa-star"), sector.linkLabel || "Saiba mais"],
+        )
+      : null;
 
-document.addEventListener("DOMContentLoaded", renderContacts);
+    const node = el(
+      "section",
+      { className: `sector ${tone}`, id, "aria-labelledby": `${id}-titulo` },
+      [
+        el("header", { className: "sector-banner" }, [
+          el("div", { className: "sector-heading" }, [
+            eyebrow,
+            el("h2", { className: "sector-title", id: `${id}-titulo` }, [
+              icon(sector.icon),
+              sector.sector,
+            ]),
+            hasValue(sector.info)
+              ? el("p", { className: "sector-info" }, [
+                  icon("fa-circle-info"),
+                  sector.info,
+                ])
+              : null,
+          ]),
+          cta,
+        ]),
+        ...body,
+      ],
+    );
+    directory.append(node);
+
+    const navCount = el("span", { className: "nav-count" });
+    const navItem = el(
+      "a",
+      {
+        className: `nav-item ${tone}`,
+        href: `#${id}`,
+        title: sector.sector,
+        "aria-label": sector.sector,
+      },
+      [
+        el(
+          "span",
+          { className: "nav-icon", "aria-hidden": "true" },
+          icon(sector.icon),
+        ),
+        el("span", { className: "nav-text", "aria-hidden": "true" }, [
+          el("span", { className: "nav-code", text: code }),
+          label ? el("span", { className: "nav-name", text: label }) : null,
+        ]),
+        navCount,
+      ],
+    );
+    sideNav.append(navItem);
+
+    const chipCount = el("span", { className: "chip-count" });
+    const chip = el("a", { className: `chip ${tone}`, href: `#${id}` }, [
+      el(
+        "span",
+        { className: "chip-icon", "aria-hidden": "true" },
+        icon(sector.icon),
+      ),
+      code,
+      chipCount,
+    ]);
+    chipNav.append(chip);
+
+    return {
+      sector,
+      tone,
+      id,
+      number,
+      node,
+      eyebrow,
+      cards,
+      groups,
+      navItem,
+      navCount,
+      chip,
+      chipCount,
+    };
+  });
+
+  // ---------- Busca ----------
+
+  function setCount(sector, visible) {
+    const total = sector.cards.length;
+    const noun = total === 1 ? "contato" : "contatos";
+    sector.eyebrow.textContent =
+      visible === total
+        ? `Setor ${sector.number} · ${total} ${noun}`
+        : `Setor ${sector.number} · ${visible} de ${total} ${noun}`;
+    sector.navCount.textContent = visible;
+    sector.chipCount.textContent = visible;
+  }
+
+  function applySearch(query) {
+    const terms = normalize(query).trim().split(/\s+/).filter(Boolean);
+    let shown = 0;
+    let total = 0;
+
+    sectors.forEach((sector) => {
+      let visible = 0;
+      sector.cards.forEach((card) => {
+        const match = terms.every((term) => card.text.includes(term));
+        card.node.hidden = !match;
+        if (match) visible++;
+      });
+      sector.groups.forEach((group) => {
+        const count = group.cards.filter((card) => !card.node.hidden).length;
+        group.node.hidden = count === 0;
+        group.countNode.textContent = count;
+      });
+      sector.node.hidden = visible === 0;
+      sector.navItem.hidden = visible === 0;
+      sector.chip.hidden = visible === 0;
+      setCount(sector, visible);
+      shown += visible;
+      total += sector.cards.length;
+    });
+
+    searchClear.hidden = !query;
+    emptyState.hidden = shown > 0;
+    searchStatus.textContent = terms.length
+      ? `${shown} de ${total} contatos para “${query.trim()}”`
+      : "";
+
+    try {
+      const url = new URL(window.location.href);
+      if (terms.length) url.searchParams.set("q", query.trim());
+      else url.searchParams.delete("q");
+      history.replaceState(null, "", url);
+    } catch (error) {}
+  }
+
+  function clearSearch() {
+    searchInput.value = "";
+    applySearch("");
+    searchInput.focus();
+  }
+
+  searchForm.addEventListener("submit", (event) => event.preventDefault());
+  // Ao filtrar com a página rolada, volta para o início da lista.
+  const content = document.getElementById("conteudo");
+  searchInput.addEventListener("input", () => {
+    applySearch(searchInput.value);
+    const top = content.getBoundingClientRect().top + window.scrollY;
+    if (window.scrollY > top) window.scrollTo({ top, behavior: "auto" });
+  });
+  searchInput.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && searchInput.value) {
+      event.preventDefault();
+      clearSearch();
+    }
+  });
+  searchClear.addEventListener("click", clearSearch);
+
+  document.addEventListener("keydown", (event) => {
+    const typing = /^(input|textarea|select)$/i.test(
+      document.activeElement.tagName,
+    );
+    if (event.key === "/" && !typing && !event.ctrlKey && !event.metaKey) {
+      event.preventDefault();
+      searchInput.focus();
+    }
+  });
+
+  document.addEventListener("click", async (event) => {
+    const copy = event.target.closest("[data-copy]");
+    if (copy) {
+      const ok = await copyText(copy.dataset.copy);
+      showToast(
+        ok ? `${copy.dataset.copyLabel} copiado!` : "Não foi possível copiar.",
+      );
+      if (ok) {
+        copy.classList.add("is-copied");
+        copy.firstElementChild.className = "fa-solid fa-check";
+        setTimeout(() => {
+          copy.classList.remove("is-copied");
+          copy.firstElementChild.className = "fa-solid fa-copy";
+        }, 1600);
+      }
+      return;
+    }
+    if (event.target.closest("[data-clear-search]")) clearSearch();
+  });
+
+  // ---------- Setor atual no menu ----------
+
+  function setCurrent(id) {
+    sectors.forEach((sector) => {
+      const current = sector.id === id;
+      sector.navItem.setAttribute("aria-current", current);
+      sector.chip.setAttribute("aria-current", current);
+      if (current && chipNav.scrollWidth > chipNav.clientWidth) {
+        chipNav.scrollTo({
+          left: sector.chip.offsetLeft - 16,
+          behavior: "smooth",
+        });
+      }
+    });
+  }
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setCurrent(entry.target.id);
+        });
+      },
+      { rootMargin: "-25% 0px -70% 0px" },
+    );
+    sectors.forEach((sector) => observer.observe(sector.node));
+  }
+
+  function updateStickyOffset() {
+    document.documentElement.style.setProperty(
+      "--sticky-offset",
+      `${searchArea.offsetHeight + 16}px`,
+    );
+  }
+  updateStickyOffset();
+  if ("ResizeObserver" in window)
+    new ResizeObserver(updateStickyOffset).observe(searchArea);
+
+  // ---------- Coluna lateral ----------
+
+  const allCards = sectors.flatMap((sector) =>
+    sector.cards.map((card) => ({ ...card, sector })),
+  );
+  const onDuty = allCards
+    .filter((card) => card.onDutyToday)
+    .sort((a, b) => a.shift.start - b.shift.start);
+
+  function stat(tone, iconName, value, label) {
+    return el("div", { className: `stat ${tone}` }, [
+      icon(iconName),
+      el("span", { className: "stat-value", text: value }),
+      el("span", { className: "stat-label", text: label }),
+    ]);
+  }
+
+  document
+    .getElementById("stats")
+    .append(
+      stat("tone-green", "fa-address-book", allCards.length, "contatos"),
+      stat("tone-blue", "fa-sitemap", sectors.length, "setores"),
+      stat("tone-purple", "fa-clock", onDuty.length, "plantões hoje"),
+    );
+
+  document.getElementById("duty-day").textContent = WEEKDAYS[today];
+  const dutyList = document.getElementById("duty-list");
+  if (onDuty.length) {
+    onDuty.forEach((card) => {
+      dutyList.append(
+        el("li", { className: card.sector.tone }, [
+          el("span", {
+            className: "avatar avatar--sm",
+            "aria-hidden": "true",
+            text: initials(card.member.name),
+          }),
+          el("a", { className: "duty-person", href: `#${card.node.id}` }, [
+            el("span", {
+              className: "duty-name",
+              text: card.member.name.trim(),
+            }),
+            el("span", { className: "duty-time", text: card.shift.time }),
+          ]),
+          card.onDutyNow
+            ? el("span", { className: "tag tag--today" }, [
+                el("span", { className: "live-dot", "aria-hidden": "true" }),
+                "agora",
+              ])
+            : null,
+        ]),
+      );
+    });
+  } else {
+    dutyList.append(
+      el("li", {
+        className: "duty-empty",
+        text: "Nenhum supervisor de plantão hoje.",
+      }),
+    );
+  }
+
+  const usefulList = document.getElementById("useful-list");
+  (typeof usefulNumbers !== "undefined" ? usefulNumbers : []).forEach(
+    (item) => {
+      const isPhone = item.type === "phone";
+      const href = isPhone ? phoneHref(item.value) : `mailto:${item.value}`;
+      usefulList.append(
+        el("li", {}, [
+          el("div", { className: "useful-text" }, [
+            el("span", { className: "useful-label", text: item.label }),
+            el("a", { className: "useful-value", href }, breakable(item.value)),
+          ]),
+          copyButton(item.value, isPhone ? "Telefone" : "E-mail", item.label),
+        ]),
+      );
+    },
+  );
+
+  const quickLinksNode = document.getElementById("quick-links");
+  (typeof quickLinks !== "undefined" ? quickLinks : []).forEach((link) => {
+    quickLinksNode.append(
+      el(
+        "a",
+        {
+          className: `quick-link tone-${link.color || "green"}`,
+          href: link.href,
+          target: "_blank",
+          rel: "noopener noreferrer",
+        },
+        [
+          el(
+            "span",
+            { className: "quick-link-icon", "aria-hidden": "true" },
+            icon(link.icon),
+          ),
+          el("span", { className: "quick-link-text" }, [
+            el("span", { className: "quick-link-label", text: link.label }),
+            el("span", {
+              className: "quick-link-desc",
+              text: link.description,
+            }),
+          ]),
+          icon("fa-arrow-up-right-from-square"),
+        ],
+      ),
+    );
+  });
+
+  // ---------- Tema claro/escuro ----------
+
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+  const currentTheme = () =>
+    document.documentElement.dataset.theme ||
+    (prefersDark.matches ? "dark" : "light");
+
+  function syncThemeButtons() {
+    const dark = currentTheme() === "dark";
+    document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
+      const label = dark ? "Tema claro" : "Tema escuro";
+      button.setAttribute("aria-label", `Ativar ${label.toLowerCase()}`);
+      button.title = `Ativar ${label.toLowerCase()}`;
+      button.querySelector("i").className =
+        `fa-solid ${dark ? "fa-sun" : "fa-moon"}`;
+      const text = button.querySelector(".side-link-label");
+      if (text) text.textContent = label;
+    });
+  }
+
+  document.querySelectorAll("[data-theme-toggle]").forEach((button) =>
+    button.addEventListener("click", () => {
+      const next = currentTheme() === "dark" ? "light" : "dark";
+      document.documentElement.dataset.theme = next;
+      try {
+        localStorage.setItem("tema", next);
+      } catch (error) {}
+      syncThemeButtons();
+    }),
+  );
+  prefersDark.addEventListener?.("change", syncThemeButtons);
+  syncThemeButtons();
+
+  // ---------- Início ----------
+
+  const initialQuery =
+    new URLSearchParams(window.location.search).get("q") || "";
+  searchInput.value = initialQuery;
+  applySearch(initialQuery);
+  setCurrent(sectors[0] && sectors[0].id);
+})();
