@@ -759,39 +759,6 @@
     );
   });
 
-  // ---------- Tema claro/escuro ----------
-
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
-  const currentTheme = () =>
-    document.documentElement.dataset.theme ||
-    (prefersDark.matches ? "dark" : "light");
-
-  function syncThemeButtons() {
-    const dark = currentTheme() === "dark";
-    document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
-      const label = dark ? "Tema claro" : "Tema escuro";
-      button.setAttribute("aria-label", `Ativar ${label.toLowerCase()}`);
-      button.title = `Ativar ${label.toLowerCase()}`;
-      button.querySelector("i").className =
-        `fa-solid ${dark ? "fa-sun" : "fa-moon"}`;
-      const text = button.querySelector(".side-link-label");
-      if (text) text.textContent = label;
-    });
-  }
-
-  document.querySelectorAll("[data-theme-toggle]").forEach((button) =>
-    button.addEventListener("click", () => {
-      const next = currentTheme() === "dark" ? "light" : "dark";
-      document.documentElement.dataset.theme = next;
-      try {
-        localStorage.setItem("tema", next);
-      } catch (error) {}
-      syncThemeButtons();
-    }),
-  );
-  prefersDark.addEventListener?.("change", syncThemeButtons);
-  syncThemeButtons();
-
   // ---------- Início ----------
 
   const initialQuery =

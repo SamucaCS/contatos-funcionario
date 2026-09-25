@@ -8,16 +8,7 @@
       name="description"
       content="Ramais e e-mails de todos os setores da Unidade Regional de Ensino de Suzano."
     />
-    <meta
-      name="theme-color"
-      content="#ffffff"
-      media="(prefers-color-scheme: light)"
-    />
-    <meta
-      name="theme-color"
-      content="#131f24"
-      media="(prefers-color-scheme: dark)"
-    />
+    <meta name="theme-color" content="#ffffff" />
     <link
       rel="icon"
       href="https://upload.wikimedia.org/wikipedia/commons/1/1a/Bras%C3%A3o_do_estado_de_S%C3%A3o_Paulo.svg"
@@ -33,14 +24,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script>
-      // Aplica o tema salvo antes da pintura para evitar o "piscar" de cores.
-      try {
-        const tema = localStorage.getItem("tema");
-        if (tema === "light" || tema === "dark")
-          document.documentElement.dataset.theme = tema;
-      } catch (e) {}
-    </script>
   </head>
   <body>
     <div class="sp-stripe" aria-hidden="true">
@@ -75,14 +58,6 @@
             ></span>
             <span class="side-link-label">Fluxograma</span>
           </a>
-          <button
-            class="side-link theme-toggle"
-            type="button"
-            data-theme-toggle
-          >
-            <span class="side-link-icon"><i class="fa-solid fa-moon"></i></span>
-            <span class="side-link-label">Tema escuro</span>
-          </button>
         </div>
       </aside>
 
@@ -110,13 +85,6 @@
             >
               <i class="fa-solid fa-diagram-project"></i>
             </a>
-            <button
-              class="icon-btn theme-toggle"
-              type="button"
-              data-theme-toggle
-            >
-              <i class="fa-solid fa-moon"></i>
-            </button>
           </div>
         </div>
 
