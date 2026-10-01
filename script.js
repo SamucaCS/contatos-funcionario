@@ -52,7 +52,7 @@ const database = [
         name: "Elisangela Andrea Marques Araujo",
         role: "Supervisor",
         phone: "4746-7211",
-        email: "elisangela.araujo@educacao.sp.gov.br",
+        email: "elisangela.marques@educacao.sp.gov.br",
       },
       {
         name: "Elizabeth das Neves Alves Pereira",
