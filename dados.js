@@ -159,7 +159,7 @@ const database = [
         name: "Elisangela Andrea Marques Araujo",
         role: "Supervisor",
         phone: "4746-7211",
-        email: "elisangela.araujo@educacao.sp.gov.br",
+        email: "elisangela.marques@educacao.sp.gov.br",
         shift: "5ª Feira das 08h as 10h",
         folders: [
           "ALUNO MONITOR DO BEEM - REGULAR",
